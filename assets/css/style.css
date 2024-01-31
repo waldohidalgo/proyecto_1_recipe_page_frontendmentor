@@ -1,0 +1,128 @@
+:root {
+  --background-color: hsl(30, 54%, 90%);
+  --color-texto: hsl(30, 10%, 34%);
+  --font-titulos: young, serif;
+  --font-body: outfit, serif;
+}
+
+@font-face {
+  font-family: young;
+  src: url("../fonts/young-serif/YoungSerif-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: outfit;
+  src: url("../fonts/outfit/Outfit-VariableFont_wght.ttf") format("truetype");
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+body {
+  background-color: var(--background-color) !important;
+}
+* {
+  font-family: var(--font-body);
+  color: var(--color-texto);
+}
+
+ul {
+  list-style: disc;
+  li {
+    span {
+      line-height: 2rem;
+      font-weight: 700;
+    }
+  }
+}
+
+ol {
+  list-style: decimal;
+  li {
+    span {
+      line-height: 2rem;
+      font-weight: 700;
+    }
+  }
+}
+li::marker {
+  font-weight: bold;
+}
+main {
+  width: 100%;
+  max-width: 800px;
+  padding: 0px;
+
+  h1,
+  h2 {
+    margin-block: 1.5rem;
+    font-family: var(--font-titulos);
+  }
+  h2 {
+    color: hsl(14, 45%, 36%);
+  }
+
+  @media screen and (min-width: 468px) {
+    width: 75%;
+    padding: 25px;
+    border-radius: 30px !important;
+    .card_image {
+      border-radius: 15px;
+    }
+  }
+}
+
+.preparation_time {
+  padding: 20px;
+  background-color: hsl(30, 18%, 87%);
+
+  h3 {
+    color: hsl(332, 51%, 32%);
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+}
+
+.ingredients {
+  ul {
+    li:not(li:last-child) {
+      padding-bottom: 1rem;
+    }
+  }
+}
+
+.instructions {
+  ol {
+    li {
+      padding-left: 1rem;
+    }
+    li:not(li:last-child) {
+      padding-bottom: 1rem;
+    }
+  }
+}
+
+.nutrition {
+  table {
+    width: 100%;
+    tr:not(tr:last-child) {
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+
+      border-color: rgba(95, 87, 78, 0.25);
+    }
+
+    td {
+      padding-block: 0.5rem;
+    }
+    td:first-child {
+      padding-left: 40px;
+    }
+    td:last-child {
+      font-weight: 700;
+    }
+  }
+}
